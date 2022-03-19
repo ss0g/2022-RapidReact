@@ -137,4 +137,29 @@ public class LauncherCommands {
             mLauncher.setMotorSpeed(mLauncher.getTargetRPS());
         }
     }
+    public class ToggleOnLauncher extends CommandBase {
+        public ToggleOnLauncher() {
+            addRequirements(mLauncher);
+        }
+
+        // Called when the command is initially scheduled.
+        @Override
+        public void initialize() {
+            mLauncher.setToggleTrue();
+        }
+
+        // Called every time the scheduler runs while the command is scheduled.
+        @Override
+        public void execute() {
+
+        }
+
+        // No isFinished because command is a WhileHeld
+
+        // Called once the command ends or is interrupted.
+        @Override
+        public void end(boolean interrupted) {
+            
+        }
+    }
 }

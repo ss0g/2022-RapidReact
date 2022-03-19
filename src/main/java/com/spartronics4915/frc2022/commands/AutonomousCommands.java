@@ -48,7 +48,7 @@ public class AutonomousCommands {
 
         @Override
         public boolean isFinished() {
-            return Math.abs(mDrive.getLeftMotor().getEncoder().getPosition()) >= kDriveDistanceMeters && Math.abs(mDrive.getRightMotor().getEncoder().getPosition()) >= kDriveDistanceMeters;
+            return Math.abs(mDrive.getLeftMotor().getEncoder().getPosition() / kDriveGearRatio) >= kDriveDistanceMeters && Math.abs(mDrive.getRightMotor().getEncoder().getPosition()/kDriveGearRatio) >= kDriveDistanceMeters;
         }
 
         @Override
