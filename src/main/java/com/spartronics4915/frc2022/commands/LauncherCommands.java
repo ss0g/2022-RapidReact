@@ -137,14 +137,15 @@ public class LauncherCommands {
             mLauncher.setMotorSpeed(mLauncher.getTargetRPS());
         }
     }
-    public class ToggleOnLauncher extends CommandBase {
-        public ToggleOnLauncher() {
+    public class TurnOnLauncher extends CommandBase {
+        public TurnOnLauncher() {
             addRequirements(mLauncher);
         }
 
         // Called when the command is initially scheduled.
         @Override
         public void initialize() {
+            mLauncher.setMotorSpeed(Flywheel.kRPS);
             mLauncher.setToggleTrue();
         }
 
@@ -154,12 +155,10 @@ public class LauncherCommands {
 
         }
 
-        // No isFinished because command is a WhileHeld
-
         // Called once the command ends or is interrupted.
         @Override
-        public void end(boolean interrupted) {
-            
+        public boolean isFinished() {
+            return true;
         }
     }
 }

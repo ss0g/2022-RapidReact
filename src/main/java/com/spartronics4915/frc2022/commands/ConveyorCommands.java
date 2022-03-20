@@ -89,7 +89,6 @@ public class ConveyorCommands {
         }
     }
 
-
     public class ShootFromTop extends SequentialCommandGroup {
         public ShootFromTop() {
             addCommands(

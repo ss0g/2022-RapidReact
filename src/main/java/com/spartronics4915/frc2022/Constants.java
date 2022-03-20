@@ -208,7 +208,7 @@ public final class Constants
         /**
          * Delay in seconds between starting Auto and shooting to let the wheel reach its speed
          */
-        public static final int kShootDelay = 1;
+        public static final double kShootDelay = 1;
 
         //Not used for first competition autonomous.
         /*public static final class Trajectory {
