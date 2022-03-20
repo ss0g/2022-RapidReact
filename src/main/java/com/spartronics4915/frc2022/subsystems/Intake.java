@@ -65,6 +65,11 @@ public class Intake extends SpartronicsSubsystem
         //logInfo("intake stopped"); - not sure if we need this, same as above
     }
 
+    public void startIntakeMotor(boolean reversed)
+    {
+        mIntakeMotor.set(reversed ? kEjectSpeed : kHarvestSpeed);
+    }
+
     public void stopIntakeMotor(){
         mIntakeMotor.set(0);
     }

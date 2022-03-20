@@ -119,7 +119,7 @@ public class RobotContainer
             mLauncherCommands.new RunLauncher(),
             new WaitCommand(Constants.Autonomous.kShootDelay),
             mConveyorCommands.new Shoot1()
-            );
+        );
     }
 
     public Command getTeleopCommand()
